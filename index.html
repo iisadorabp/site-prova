@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tudo sobre os melhores fliperamas dos anos 80: história, jogos clássicos, e mais!">
-    <title>Fliperamas anos 80</title>
+    <title>Fliperamas nos Anos 80</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
+    <!-- Cabeçalho com Menu Hamburguer -->
     <header>
         <div class="logo">
-            <h1>Fliperamas Online</h1>
+            <h1>Fliperamas dos Anos 80</h1>
         </div>
-        <nav>
+        <nav class="navbar">
             <ul>
+                <li><a href="#inicio">Início</a></li>
                 <li><a href="#historia">História</a></li>
-                <li><a href="#jogos">Jogos Clássicos</a></li>
+                <li><a href="#jogos">Jogos Populares</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
 
-    <section id="historia" class="section">
+    <!-- Seção Principal -->
+    <section id="inicio" class="main-section">
+        <h2>Bem-vindo ao Mundo dos Fliperamas!</h2>
+        <p>Reviva os clássicos dos fliperamas dos anos 80 e mergulhe na nostalgia dos jogos que marcaram uma geração.</p>
+        <img src="fliperama vintage (1).png" alt="Fliperama">
+    </section>
+
+    <!-- Seção História -->
+    <section id="historia" class="history-section">
         <h2>A História dos Fliperamas</h2>
         <p>Os fliperamas tiveram um papel crucial na revolução dos anos 80, transformando a indústria de jogos e a cultura pop de uma forma que perdura até hoje. Nos primeiros anos dessa década, os arcades se tornaram o centro do entretenimento jovem, criando um novo espaço social onde as pessoas se reuniam para competir e se divertir. Jogos como <strong>Pac-man</strong>, <strong>Space Invaders</strong>, e <strong>Donkey Kong</strong>, não só introduziram novas mecânicas de jogo, mas também criaram uma linguagem única para os gamers, com suas pontuações mais altas e batalhas épicas por recordes. 
 
             Os fliperamas não eram apenas locais de diversão, mas verdadeiros centros culturais, onde o jogo se tornou uma forma de expressão, um meio de socialização e até uma competição saudável. Essa explosão de popularidade ajudou a definir os videogames como uma parte essencial do entretenimento moderno, estabelecendo a indústria como uma das maiores do mundo. Ao longo da década de 80, os fliperamas tornaram-se um ícone da juventude, refletindo o espírito de uma geração que vivia a revolução tecnológica e digital.</p>
-        <p>Com o tempo, os fliperamas evoluíram, oferecendo gráficos melhores, mais opções de jogos e uma experiência de imersão nunca antes vista. Até hoje, muitos colecionadores e entusiastas mantêm viva a nostalgia desses clássicos.</p>
-        <img src="fliperama vintage (1).png" alt="Fliperama vintage" class="full-width-img">
     </section>
 
-    <section id="jogos" class="section">
-        <h2>Jogos Clássicos</h2>
+    <!-- Seção Jogos Populares -->
+    <section id="jogos" class="games-section">
+        <h2>Jogos Populares</h2>
         <div class="games-list">
             <div class="game">
                 <img src="pong_cabbig-web (1).jpg" alt="Pong">
@@ -69,34 +81,30 @@
         </div>
     </section>
 
-    <section id="galeria" class="section">
+    <!-- Seção Galeria de Imagens -->
+    <section id="galeria" class="gallery-section">
         <h2>Galeria de Fliperamas</h2>
         <div class="gallery">
-            <img src="https://via.placeholder.com/300x200?text=Fliperama+1" alt="Fliperama 1">
-            <img src="https://via.placeholder.com/300x200?text=Fliperama+2" alt="Fliperama 2">
-            <img src="https://via.placeholder.com/300x200?text=Fliperama+3" alt="Fliperama 3">
-            <img src="https://via.placeholder.com/300x200?text=Fliperama+4" alt="Fliperama 4">
+            <img src="flip 1.jpg" alt="Fliperama 1">
+            <img src="flip2.jpg" alt="Fliperama 2">
+            <img src="flip3.jpg" alt="Fliperama 3">
         </div>
     </section>
 
-    <section id="contato" class="section">
-        <h2>Entre em Contato</h2>
-        <form action="#">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+    
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+    
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+<footer>
+    <p>&copy; 2024 Fliperamas Online - Todos os direitos reservados.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2024 Fliperamas Online - Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>

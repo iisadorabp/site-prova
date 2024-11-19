@@ -1,77 +1,159 @@
-/* Resetando margens e padding */
+/* Reset de margin e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* Corpo e fontes */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #101010;
+    color: #fff;
+    line-height: 1.6;
 }
 
+header {
+    background-color: #f1c40f;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    }
+    
+    .lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+    }
+    
+    .lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+    }
+    
+    .botoes__item {
+    margin: 0 0.5em;
+    }
+
+    
 /* Cabeçalho */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #f1c40f;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 header .logo h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #2c3e50;
 }
 
-header nav ul {
-    list-style-type: none;
-    margin-top: 10px;
+.navbar {
+    display: flex;
+    list-style: none;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+.navbar ul {
+    display: flex;
 }
 
-header nav ul li a {
-    color: white;
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
     text-decoration: none;
-    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+.navbar a:hover {
+    color: #e74c3c;
 }
 
-/* Seções */
-.section {
-    padding: 40px 20px;
+/* Menu Hamburguer */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #f1c40f;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar li {
+        margin: 1rem 0;
+    }
+
+    .navbar a {
+        color: #2c3e50;
+    }
+}
+
+/* Seções principais */
+section {
+    padding: 3rem 2rem;
+}
+
+.main-section {
+    background-color: #34495e;
     text-align: center;
 }
 
-.section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
+.main-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.section p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #555;
+.history-section, .games-section {
+    background-color: #2c3e50;
 }
 
-/* Imagem de fundo */
-.full-width-img {
-    width: 100%;
-    height: auto;
-    margin-top: 30px;
+.gallery-section {
+    background-color: #34495e;
+}
+
+.gallery img {
+    margin: 1rem;
     border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Lista de jogos */
 .games-list {
     display: flex;
     justify-content: center;
@@ -93,5 +175,15 @@ header nav ul li a:hover {
     border-radius: 10px;
 }
 
-.game h3 {
-    margin-top:
+
+/* Rodapé */
+footer {
+    background-color: #788189;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
